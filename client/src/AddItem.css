@@ -1,0 +1,28 @@
+/* AddItem.css */
+
+/* Style the whole form container */
+.add-item-form {
+  border: 1px solid #eee;  /* Add a light border */
+  border-radius: 8px;      /* Round the corners */
+  padding: 20px;           /* Add some internal spacing */
+  width: 350px;            /* Give the form a fixed width */
+}
+
+/* This styles the <div>s that wrap each label/input pair */
+.form-row {
+  margin-bottom: 12px; /* Adds space between the "Title" row and the "Description" row */
+}
+
+/* Style all labels inside the form */
+.form-row label {
+  display: inline-block;  /* This is key! It lets us set a width. */
+  width: 100px;           /* Give all labels the same width */
+  text-align: right;      /* Aligns the text (Title, Description) to the right */
+  margin-right: 10px;     /* Adds a small space between the label and the input box */
+}
+
+/* Style the button */
+.add-item-form button {
+  /* This trick centers the button */
+  margin-left: 110px; /* This should be (label width + margin-right) */
+}
