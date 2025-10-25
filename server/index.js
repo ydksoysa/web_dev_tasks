@@ -26,6 +26,21 @@ app.get('/items', async (req, res) => {
   }
 });
 
+// CREATE a new item
+app.post('/items', async (req, res) => {
+  try {
+    const newItem = new Item({
+      title: req.body.title,
+      description: req.body.description,
+    });
+    
+    const savedItem = await newItem.save();
+    res.json(savedItem); // Send the new item back to the frontend
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
 const PORT = 5000;
 app.listen(PORT, () => {
   // This line was also fixed
